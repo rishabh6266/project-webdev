@@ -1,0 +1,135 @@
+
+
+Karan aujla simple · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karan Aujla</title>
+<style>
+  :root{
+    --bg:#000; --panel:#121212; --text:#fff; --muted:#a7a7a7; --accent:#1db954; --line:#282828;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+ 
+  /* Hero */
+  .hero{
+    min-height:300px; display:flex; align-items:flex-end; padding:24px 32px;
+    background:linear-gradient(160deg,#4a3b2a,#1a1a1a);
+  }
+  .hero h1{font-size:56px; font-weight:900; margin-bottom:10px; letter-spacing:-1px;}
+  .verified{display:flex; align-items:center; gap:6px; font-size:14px; font-weight:700; margin-bottom:6px;}
+  .badge{
+    width:18px; height:18px; border-radius:50%; background:var(--accent);
+    display:inline-flex; align-items:center; justify-content:center; font-size:11px; color:#000;
+  }
+  .listeners{color:var(--muted); font-size:14px;}
+ 
+  /* Actions */
+  .actions{
+    display:flex; align-items:center; gap:20px; padding:20px 32px;
+    background:linear-gradient(#241c14,#121212);
+  }
+  .play-circle{
+    width:56px; height:56px; border-radius:50%; background:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; color:#000;
+  }
+  .follow-btn{
+    border:1px solid #7a7a7a; background:none; color:var(--text);
+    padding:8px 18px; border-radius:999px; font-weight:600; font-size:14px; cursor:pointer;
+  }
+ 
+  /* Track list */
+  .tracks{padding:8px 32px 40px;}
+  .tracks h2{font-size:22px; margin-bottom:16px;}
+  .track-row{
+    display:grid; grid-template-columns:28px 44px 1fr 220px 60px; align-items:center;
+    gap:14px; padding:10px 8px; border-radius:6px;
+  }
+  .track-row:hover{background:#1e1e1e;}
+  .idx{color:var(--muted); font-size:15px; text-align:center;}
+  .cover{
+    width:44px; height:44px; border-radius:4px;
+    display:flex; align-items:center; justify-content:center; font-size:16px; color:#fff;
+  }
+  .title{font-size:15px; font-weight:500;}
+  .dur{color:var(--muted); font-size:14px; text-align:right;}
+ 
+  audio{width:100%; height:32px; filter:invert(1) hue-rotate(180deg) contrast(0.9);}
+ 
+  @media (max-width:700px){
+    .hero h1{font-size:34px;}
+    .track-row{grid-template-columns:22px 36px 1fr 140px;}
+    .dur{display:none;}
+  }
+</style>
+</head>
+<body>
+ 
+  <div class="hero">
+    <div>
+      <h1>Karan Aujla</h1>
+      <div class="verified"><span class="badge">✓</span> Verified Artist</div>
+      <div class="listeners">16,998,613 monthly listeners</div>
+    </div>
+  </div>
+ 
+  <div class="actions">
+    <div class="play-circle">▶</div>
+    <button class="follow-btn">Follow</button>
+  </div>
+ 
+  <div class="tracks">
+    <h2>Popular</h2>
+ 
+    <div class="track-row">
+      <div class="idx">1</div>
+      <div class="cover" style="background:#8e7355;">♪</div>
+      <div class="title">Boyfriend</div>
+      <audio controls src="Boyfriend.mp3"></audio>
+      <div class="dur">2:40</div>
+    </div>
+ 
+    <div class="track-row">
+      <div class="idx">2</div>
+      <div class="cover" style="background:#8e7355;">♪</div>
+      <div class="title">For A Reason</div>
+      <audio controls src="For A Reason.mp3"></audio>
+      <div class="dur">3:00</div>
+    </div>
+ 
+    <div class="track-row">
+      <div class="idx">3</div>
+      <div class="cover" style="background:#e6b800;">♪</div>
+      <div class="title">Wavy</div>
+      <audio controls src="Wavy.mp3"></audio>
+      <div class="dur">2:41</div>
+    </div>
+ 
+    <div class="track-row">
+      <div class="idx">4</div>
+      <div class="cover" style="background:#555;">♪</div>
+      <div class="title">Low Fade</div>
+      <audio controls src="Low Fade.mp3"></audio>
+      <div class="dur">2:55</div>
+    </div>
+ 
+    <div class="track-row">
+      <div class="idx">5</div>
+      <div class="cover" style="background:#b03030;">♪</div>
+      <div class="title">Winning Speech</div>
+      <audio controls src="">/Users/apple/Downloads/winning speech.mp3</audio>
+      <div class="dur">3:47</div>
+    </div>
+ 
+  </div>
+ 
+</body>
+</html>
+ 
